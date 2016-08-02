@@ -7,6 +7,7 @@
  * # MainCtrl
  * Controller of the nflDocketApp
  */
+/*
 angular.module('nflDocketApp')
   .controller('MainCtrl', function () {
     this.awesomeThings = [
@@ -14,4 +15,10 @@ angular.module('nflDocketApp')
       'AngularJS',
       'Karma'
     ];
+  });
+*/
+
+angular.module('nflDocketApp')
+  .controller('MainCtrl', function ($scope, current) {
+    $scope.current = current.query();
   });
