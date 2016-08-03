@@ -1,16 +1,16 @@
-<div class="jumbotron">
+<div ng-app class="jumbotron" ng-controller="MainCtrl">
   <select name="Team">Choose Your Team
     <option value="49ers">San Francisco 49ers</option>
     <option value="Bears">Chicago Bears</option>
     <option value="Bengals">Cincinnati Bengals</option>
     <option value="Broncos">Denver Broncos</option>
     <option value="Browns">Cleveland Browns</option>
-    <option value="Bills">Tampa Bay Buccaneers</option>
-    <option value="Bills">Arizon Cardinals</option>
-    <option value="Bills">San Diego Chargers</option>
-    <option value="Bills">Kansas City Chiefs</option>
-    <option value="Bills">Indianapolis Colts</option>
-    <option value="Bills">Dallas Cowboys</option>
+    <option value="Bucs">Tampa Bay Buccaneers</option>
+    <option value="Cards">Arizon Cardinals</option>
+    <option value="Charg">San Diego Chargers</option>
+    <option value="Chief">Kansas City Chiefs</option>
+    <option value="Colts">Indianapolis Colts</option>
+    <option value="Cowbo">Dallas Cowboys</option>
     <option value="Bills">Miami Dolphins</option>
     <option value="Bills">Philidelphia Eagles</option>
     <option value="Bills">Atlanta Falcons</option>
@@ -45,7 +45,7 @@
 </div>
 
 <div class="row marketing">
-  <dl>
-    <dd>{{nflDocketApp | json}}</dd>
-  </dl>
+
+    {{current.weeks[0].games[0]}}
+
 </div>
