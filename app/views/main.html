@@ -1,42 +1,43 @@
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
   <select ng-model="teamname">
     <option value="defaul">Choose Your Team</option>
-    <option value="49ers">San Francisco 49ers</option>
-    <option value="bears">Chicago Bears</option>
-    <option value="benga">Cincinnati Bengals</option>
-    <option value="broncos">Denver Broncos</option>
-    <option value="browns">Cleveland Browns</option>
-    <option value="buccs">Tampa Bay Buccaneers</option>
-    <option value="cards">Arizon Cardinals</option>
-    <option value="charg">San Diego Chargers</option>
-    <option value="chief">Kansas City Chiefs</option>
-    <option value="colts">Indianapolis Colts</option>
-    <option value="cowbo">Dallas Cowboys</option>
-    <option value="dolph">Miami Dolphins</option>
+    <option value="SF">San Francisco 49ers</option>
+    <option value="CHI">Chicago Bears</option>
+    <option value="CIN">Cincinnati Bengals</option>
+    <option value="BUF">Buffalo Bills</option>
+    <option value="DEN">Denver Broncos</option>
+    <option value="CLE">Cleveland Browns</option>
+    <option value="TB">Tampa Bay Buccaneers</option>
+    <option value="ARI">Arizon Cardinals</option>
+    <option value="SD">San Diego Chargers</option>
+    <option value="KC">Kansas City Chiefs</option>
+    <option value="IND">Indianapolis Colts</option>
+    <option value="DAL">Dallas Cowboys</option>
+    <option value="MIA">Miami Dolphins</option>
     <option value="eagle">Philidelphia Eagles</option>
-    <option value="falco">Atlanta Falcons</option>
-    <option value="giant">New York Giants</option>
+    <option value="ATL">Atlanta Falcons</option>
+    <option value="NYG">New York Giants</option>
     <option value="JAC">Jacksonville Jaguars</option>
-    <option value="njets">New York Jets</option>
-    <option value="lions">Detroit Lions</option>
+    <option value="NYJ">New York Jets</option>
+    <option value="DET">Detroit Lions</option>
     <option value="GB">Green Bay Packers</option>
-    <option value="panth">Carolina Panthers</option>
-    <option value="npats">New England Patriots</option>
-    <option value="raide">Oakland Raiders</option>
-    <option value="srams">St. Louis Rams</option>
-    <option value="raven">Baltimore Ravens</option>
-    <option value="redsk">Washington Redskins</option>
-    <option value="saint">New Orleans Saints</option>
-    <option value="seaha">Seattle Seahawks</option>
-    <option value="steel">Pittsburgh Steelers</option>
-    <option value="texan">Houston Texans</option>
-    <option value="titan">Tennessee Titans</option>
-    <option value="vikin">Minnesota Vikings</option>
+    <option value="CAR">Carolina Panthers</option>
+    <option value="NE">New England Patriots</option>
+    <option value="OAK">Oakland Raiders</option>
+    <option value="LA">Los Angeles Rams</option>
+    <option value="BAL">Baltimore Ravens</option>
+    <option value="WAS">Washington Redskins</option>
+    <option value="NO">New Orleans Saints</option>
+    <option value="SEA">Seattle Seahawks</option>
+    <option value="PIT">Pittsburgh Steelers</option>
+    <option value="HOU">Houston Texans</option>
+    <option value="TEN">Tennessee Titans</option>
+    <option value="MIN">Minnesota Vikings</option>
   </select>
 
   <h1>Results will automatically in the time zone based on your computer settings.</h1>
 
-  <button ng-click="selectteam(teamname)">Lets Go</button>
+  <button ng-click="selectteam(teamname)">Leh Go!</button>
 </div>
 
 <div ng-repeat= "week in current.weeks">
