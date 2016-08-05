@@ -1,5 +1,5 @@
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
-  <select name="Team">
+  <select ng-model="teamname">
     <option value="defaul">Choose Your Team</option>
     <option value="49ers">San Francisco 49ers</option>
     <option value="bears">Chicago Bears</option>
@@ -16,10 +16,10 @@
     <option value="eagle">Philidelphia Eagles</option>
     <option value="falco">Atlanta Falcons</option>
     <option value="giant">New York Giants</option>
-    <option value="jagua">Jacksonville Jaguars</option>
+    <option value="JAC">Jacksonville Jaguars</option>
     <option value="njets">New York Jets</option>
     <option value="lions">Detroit Lions</option>
-    <option value="packe">Green Bay Packers</option>
+    <option value="GB">Green Bay Packers</option>
     <option value="panth">Carolina Panthers</option>
     <option value="npats">New England Patriots</option>
     <option value="raide">Oakland Raiders</option>
@@ -34,20 +34,14 @@
     <option value="vikin">Minnesota Vikings</option>
   </select>
 
-  <select name="time">
-    <option value="default">Choose Your Time Zone</option>
-    <option value="East">Eastern (New York, NY)  UTC-5</option>
-    <option value="Cent">Central (Dallas, TX)  UTC-6</option>
-    <option value="Moun">Mountain (Denver, CO) UTC-7</option>
-    <option value="West">Pacific (Los Angeles, CA) UTC-8</option>
-  </select>
+  <h1>Results will automatically in the time zone based on your computer settings.</h1>
 
-  <input type="submit" value="Leh Go">
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Leh Go!<span class="glyphicon glyphicon-ok"></span></a></p>
+  <button ng-click="selectteam(teamname)">Lets Go</button>
 </div>
 
-<div class="row marketing">
-
-    {{current.weeks[0].games[0]}}
-
+<div ng-repeat= "week in current.weeks">
+  <h2>Week {{week.title}}</h2>
+  <div ng-repeat="game in week.games">
+      {{game.away.name}} @ {{game.home.name}} on {{game.broadcast.network}} at {{game.scheduled|date: "short"}}
+  </div>
 </div>
