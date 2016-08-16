@@ -1,4 +1,7 @@
-<div ng-app class="jumbotron" ng-controller="MainCtrl">
+<div ng-app ng-controller="MainCtrl">
+
+  <h1>Select the Team Schedule you would like to view.</h1>
+
   <select ng-model="teamname">
     <option value="defaul">Choose Your Team</option>
     <option value="SF">San Francisco 49ers</option>
@@ -35,14 +38,8 @@
     <option value="MIN">Minnesota Vikings</option>
   </select>
 
-  <h1>Results will automatically in the time zone based on your computer settings.</h1>
+  <h2>Results will automatically in the time zone based on your computer settings.</h2>
 
   <button ng-click="selectteam(teamname)">Leh Go!</button>
-</div>
-
-<div ng-repeat= "week in current.weeks">
-  <h2>Week {{week.title}}</h2>
-  <div ng-repeat="game in week.games">
-      {{game.away.name}} @ {{game.home.name}} on {{game.broadcast.network}} at {{game.scheduled|date: "short"}}
-  </div>
+  
 </div>

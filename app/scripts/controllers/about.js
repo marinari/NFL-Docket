@@ -7,11 +7,14 @@
  * # AboutCtrl
  * Controller of the nflDocketApp
  */
-angular.module('nflDocketApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+ 
+  angular.module('nflDocketApp')
+    .controller('MainCtrl', function ($scope, current) {
+      $scope.current = current.query();
+      $scope.selectteam = function (teamname){
+        console.log ("selected team: " + teamname);
+        $scope.selectedteam = teamname;
+        $scope.current = current.query();
+      };
+
+    });
