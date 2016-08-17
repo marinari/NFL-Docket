@@ -1,8 +1,19 @@
-<h1>[Team Slogan Here]</h1>
-
-<div ng-controller="AboutCtrl" ng-repeat= "week in current.weeks">
+<div ng-controller="AboutCtrl" class="results">
+  <h1>[Team Slogan Here]</h1>
+  <ul><!--Calendar export buttons-->
+    <li>iCal</li>
+    <li>Google Cal</li>
+    <li>textfile</li>
+  </ul>
+  <div ng-repeat= "week in current.weeks">
     <h2>Week {{week.title}}</h2>
-    <div ng-repeat="game in week.games">
+    <div ng-repeat="game in filteredGames = (week.games | filter:teamname)">
+      <span>
         {{game.away.name}} @ {{game.home.name}} on {{game.broadcast.network}} at {{game.scheduled|date: "short"}}
+      </span>
     </div>
+    <div ng-hide="filteredGames.length">
+        Bye Week
+    </div>
+  </div>
 </div>
